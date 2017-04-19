@@ -468,7 +468,7 @@ foreach ($data as $key ) {
                   <th>Category Id</th>
                   <th>Category Name</th>
                   <th>Brands in Category</th>
-                  
+                   <th>Date & Time</th>
                   <th>Actions</th>
                 </tr>
                 </thead>
@@ -503,6 +503,9 @@ foreach ($data as $key ) {
 
                   echo $key['name'];
                   ?></td>
+                    <td>
+                    <?php echo $key['date'];?>
+                    </td>
                   <td>
                 
                        <?php
@@ -527,7 +530,7 @@ echo $k1['name']." , ";
                  </td>
                 
                  
-                  <td><?php echo "<a class='btn btn-danger' href='../included/category/delcategory.php?id=".$key{'id'}."'> Delete</a>";?> <?php echo "<a class='btn btn-warning' href='../included/brand/check.php?id=".$key{'id'}."'> Update</a>";?></td>
+                  <td><?php echo "<a class='btn btn-danger' href='../included/category/delcategory.php?id=".$key{'id'}."'> Delete</a>";?></td>
                 </tr>
                               <?php
                     }
@@ -542,6 +545,7 @@ echo $k1['name']." , ";
                 <tr>
                   <th>Category Id</th>
                   <th>Category Name</th>
+                     <th>Date & Time</th>
                   <th>Brands in Category</th>
                   
                   <th>Actions</th>

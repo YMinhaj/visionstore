@@ -10,7 +10,7 @@ include 'connection.php';
 
 
 
-		$sql ="insert into category (name)values('$name1')";
+		$sql ="insert into category (name,date)values('$name1',NOW())";
 
 		$conn->prepare($sql);
 		if($conn->exec($sql))

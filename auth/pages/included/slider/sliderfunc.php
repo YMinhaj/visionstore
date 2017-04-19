@@ -9,7 +9,7 @@ include 'connection.php';
 $img=$_FILES['slider']['name'];
          $pro_img_tmp=$_FILES['slider']['tmp_name'];
          move_uploaded_file($pro_img_tmp,"slider/$img");
-$sql ="insert into slider (slider_img,slider_title)values('$img','$title')";
+$sql ="insert into slider (slider_img,slider_title,date)values('$img','$title',NOW())";
 
 		$conn->prepare($sql);
 		if($conn->exec($sql))

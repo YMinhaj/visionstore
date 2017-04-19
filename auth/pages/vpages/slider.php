@@ -446,7 +446,7 @@ include('../included/slider/connection.php');
                 <tr>
                   <th>Slider Id</th>
                   <th>Description</th>
-                
+                <th>Date & Time</th>
                   <th>Slider Image</th>
                   <th>Actions</th>
                 </tr>
@@ -477,7 +477,10 @@ foreach ($data as $key ) {
 
                   echo $key['slider_title'];
                   ?></td>
+<td><?php
 
+                  echo $key['date'];
+                  ?></td>
                   <td> <?php
 
                   echo "<img  height='70px' src=../included/slider/slider/". $key['slider_img'].">";
@@ -497,7 +500,7 @@ foreach ($data as $key ) {
                 <tr>
                  <th>Slider Id</th>
                   <th>Description</th>
-                
+                   <th>Date & Time</th>
                   <th>Slider Image</th>
                   <th>Actions</th>
                 </tr>

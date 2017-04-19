@@ -366,8 +366,6 @@ include '../included/brand/brandfunc.php';
                 <div class="form-group">
 
 Name: <input type=text class="form-control" name="add" >
-MENS/WOMANS/LENSE CATEGORY: 
-</br><input type="checkbox" class="minimal-red" name="m" value="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="minimal-red" name="f" value="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="minimal-red" name="l" value="1">
 
                 </div>
                 <div class="form-group">
@@ -454,7 +452,7 @@ MENS/WOMANS/LENSE CATEGORY:
                 <tr>
                   <th>Brand Id</th>
                   <th>Brand Name</th>
-                  <th>M/W/L</th>
+                 <th>Date & Time</th>
                   <th>Brand Image</th>
                   <th>Actions</th>
                 </tr>
@@ -485,9 +483,13 @@ foreach ($data as $key ) {
 
                   echo $key['name'];
                   ?></td>
-                  <td><input type="checkbox" <?php if($key['men']=="1"){echo "checked"; } ?>
-
-                  disabled>  <input type="checkbox" <?php if($key['women']=="1"){echo "checked"; } ?> disabled>  <input type="checkbox" <?php if($key['lense']=="1"){echo "checked"; } ?> disabled></td>
+                  
+                    <td>
+                        <?php
+                        echo $key['date'];
+                            ?>
+                    </td>
+                    
                   <td> <?php
 
                   echo "<img  height='70px' src=../included/brand/brandpic/". $key['image'].">";
@@ -507,7 +509,7 @@ foreach ($data as $key ) {
                 <tr>
                  <th>Brand Id</th>
                   <th>Brand Name</th>
-                  <th>M/W/L</th>
+                 <th>Date & Time</th>
                   <th>Brand Image</th>
                   <th>Actions</th>
                 </tr>

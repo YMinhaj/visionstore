@@ -4,43 +4,6 @@ include 'connection.php';
 
 	if(isset($_POST['addbrand']))
 	{
-	if(isset($_POST['m']))
-	{
-		if ($_POST['m'] == '1')
-		{
-			$checkm = "1";
-		}
-	}
-
-		else
-		{
-			$checkm = "0";
-		}
-		if(isset($_POST['f']))
-	{
-		if ($_POST['f'] == '1')
-		{
-			$checkf = "1";
-		}
-	}
-
-		else
-		{
-			$checkf = "0";
-		}
-		if(isset($_POST['l']))
-	{
-		if ($_POST['l'] == '1')
-		{
-			$checkl = "1";
-		}
-	}
-
-		else
-		{
-			$checkl = "0";
-		}
-	
 	
 	
 		$name1 = $_POST['add'];
@@ -51,7 +14,7 @@ $img=$_FILES['brandpic']['name'];
 
 
 
-		$sql ="insert into brand (name,image,men,women,lense)values('$name1','$img','$checkm','$checkf','$checkl')";
+		$sql ="insert into brand (name,image,date)values('$name1','$img',NOW())";
 
 		$conn->prepare($sql);
 		if($conn->exec($sql))
